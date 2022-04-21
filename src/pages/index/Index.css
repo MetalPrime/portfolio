@@ -1,0 +1,82 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 200vh;
+  background: #000;
+}
+
+.headline {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+.Index{
+  width:50%;
+  padding: 10px;
+  padding-left: 100px;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+}
+
+.Index__title{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  text-align:left;
+  background: linear-gradient(rgba(14, 62, 151) 50%, black);
+  padding:20px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.Index_titleBg{
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  height: 40vh;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.Index h1{
+  font-weight: bold;
+  font-size: 2.5vw;
+}
+
+.Index p{
+  font-weight: lighter;
+  font-size: 1.5vw;
+}
+
+
+
+.inset {
+  position: absolute;
+  inset: 0;
+}
+.white {
+  color: white;
+}
+.gray {
+  color: #446;
+}
+
+.full {
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient {
+  background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
+}
