@@ -1,0 +1,191 @@
+.pillars-banner {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+}
+
+.pillars-gradient-bg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+  position: absolute;
+  inset: 0;
+}
+
+.pillars-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.pillars-header {
+  text-align: center;
+  margin-bottom: 80px;
+  color: #fff;
+}
+
+.pillars-header h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(14, 62, 151, 0.5);
+}
+
+.pillars-header p {
+  font-size: 1.25rem;
+  color: #bbb;
+  margin: 0;
+  font-weight: 300;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.pillar-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(14, 62, 151, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.pillar-card:hover {
+  border-color: rgba(14, 62, 151, 0.5);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(14, 62, 151, 0.15) 100%);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(14, 62, 151, 0.3);
+}
+
+.pillar-card:hover::before {
+  left: 100%;
+}
+
+.pillar-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  color: #0e3e97;
+  filter: drop-shadow(0 0 10px rgba(14, 62, 151, 0.5));
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover .pillar-icon {
+  color: #fff;
+  filter: drop-shadow(0 0 20px rgba(14, 62, 151, 0.8));
+  transform: scale(1.1);
+}
+
+.pillar-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #fff;
+}
+
+.pillar-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .pillar-card,
+  .pillar-card::before,
+  .pillar-icon {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pillars-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .pillars-header p {
+    font-size: 1rem;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .pillar-card {
+    padding: 30px 20px;
+  }
+
+  .pillar-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .pillar-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pillars-header h2 {
+    font-size: 2rem;
+  }
+
+  .pillars-container {
+    padding: 40px 15px;
+  }
+
+  .pillars-header {
+    margin-bottom: 50px;
+  }
+
+  .pillars-grid {
+    gap: 20px;
+  }
+
+  .pillar-card {
+    padding: 25px 15px;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.pillar-card:focus-within {
+  border-color: rgba(14, 62, 151, 0.8);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(14, 62, 151, 0.2) 100%);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 62, 151, 0.3);
+}
