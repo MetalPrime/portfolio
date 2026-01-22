@@ -1,0 +1,249 @@
+.banner-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  position: relative;
+}
+
+.banner-gradient-bg {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+  position: absolute;
+  inset: 0;
+}
+
+.banner-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(14, 62, 151, 0.4) 50%, rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+}
+
+.banner-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(14, 62, 151, 0.3);
+}
+
+.banner-subtitle {
+  font-size: 1.25rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+.banner-tech-intro {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin: 0;
+  font-weight: 300;
+}
+
+.tech-typing {
+  color: #87ceeb;
+  font-weight: 500;
+}
+
+.banner-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(14, 62, 151, 0.12) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(14, 62, 151, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tech-category h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #87ceeb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.banner-info {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.5) 0%, rgba(14, 62, 151, 0.4) 100%);
+  border: 1px solid rgba(14, 62, 151, 0.4);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.banner-info:hover,
+.banner-info.active {
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.4) 0%, rgba(14, 62, 151, 0.2) 100%);
+  border-color: rgba(14, 62, 151, 0.6);
+  color: #87ceeb;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(14, 62, 151, 0.3);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .tech-badge {
+    transition: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .banner-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .tech-category h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    padding: 40px 15px;
+    min-height: auto;
+  }
+
+  .banner-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+
+  .banner-tech-intro {
+    font-size: 1rem;
+  }
+
+  .banner-tech-grid {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .tech-items {
+    gap: 10px;
+  }
+
+  .tech-badge {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    padding: 30px 10px;
+  }
+
+  .banner-content {
+    gap: 25px;
+  }
+
+  .banner-title {
+    font-size: 1.5rem;
+  }
+
+  .banner-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .banner-tech-intro {
+    font-size: 0.9rem;
+  }
+
+  .banner-tech-grid {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .tech-category h3 {
+    font-size: 0.8rem;
+  }
+
+  .tech-badge {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .tech-items {
+    gap: 8px;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.tech-badge:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 62, 151, 0.5);
+}
