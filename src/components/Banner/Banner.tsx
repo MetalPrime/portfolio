@@ -1,6 +1,6 @@
-import { ParallaxBanner } from "react-scroll-parallax";
-import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
-import Typed from 'react-typed';
+import { ParallaxBanner, BannerLayer } from "react-scroll-parallax";
+import { ReactTyped } from "react-typed";
+
 
 
 export const AdvancedBannerTop = () => {
@@ -45,7 +45,7 @@ export const AdvancedBannerTop = () => {
                         product development hand in hand with research and programming.
                         I want to make products that make people's lives easier and help
                         us grow as a species. You can tell me about {''}
-                        <Typed
+                        <ReactTyped
                             loop
                             typeSpeed={80}
                             backSpeed={20}
