@@ -1,0 +1,450 @@
+.project-detail {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  position: relative;
+  padding-top: 20px;
+}
+
+.project-detail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+}
+
+.project-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid rgba(14, 62, 151, 0.5);
+  color: #87ceeb;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background: rgba(14, 62, 151, 0.2);
+  border-color: rgba(14, 62, 151, 0.8);
+  color: #fff;
+}
+
+.back-button:active {
+  transform: scale(0.98);
+}
+
+.loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #87ceeb;
+}
+
+.error-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.error-container p {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+/* Hero Section */
+.project-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(14, 62, 151, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.project-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-category-detail {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.4) 0%, rgba(14, 62, 151, 0.2) 100%);
+  border: 1px solid rgba(14, 62, 151, 0.6);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #87ceeb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+.project-hero h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(14, 62, 151, 0.3);
+}
+
+.project-lead {
+  font-size: 1.25rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+.project-hero-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(14, 62, 151, 0.1);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.2) 0%, rgba(14, 62, 151, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(14, 62, 151, 0.2) 100%);
+  pointer-events: none;
+}
+
+/* Description Section */
+.project-description-section {
+  margin-bottom: 100px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(14, 62, 151, 0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.project-description-section h2 {
+  font-size: 2.5rem;
+  margin: 0 0 30px 0;
+  text-shadow: 0 2px 8px rgba(14, 62, 151, 0.2);
+}
+
+.project-description-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Technologies Section */
+.project-technologies {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  margin-bottom: 100px;
+  align-items: start;
+}
+
+.tech-section,
+.tools-section {
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(14, 62, 151, 0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.tech-section h2,
+.tools-section h2 {
+  font-size: 2rem;
+  margin: 0 0 30px 0;
+  text-shadow: 0 2px 8px rgba(14, 62, 151, 0.2);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.tech-card {
+  padding: 20px;
+  background: rgba(14, 62, 151, 0.1);
+  border: 1px solid rgba(14, 62, 151, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  background: rgba(14, 62, 151, 0.2);
+  border-color: rgba(14, 62, 151, 0.5);
+  transform: translateX(5px);
+}
+
+.tech-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+  color: #87ceeb;
+}
+
+.tech-card p {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tool-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.2) 0%, rgba(14, 62, 151, 0.1) 100%);
+  border: 1px solid rgba(14, 62, 151, 0.4);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: #87ceeb;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tool-badge:hover {
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.3) 0%, rgba(14, 62, 151, 0.2) 100%);
+  border-color: rgba(14, 62, 151, 0.6);
+  color: #fff;
+}
+
+/* Links Section */
+.project-links {
+  margin-bottom: 100px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.15) 0%, rgba(14, 62, 151, 0.05) 100%);
+  border: 1px solid rgba(14, 62, 151, 0.3);
+  border-radius: 20px;
+}
+
+.project-links h2 {
+  font-size: 2.5rem;
+  margin: 0 0 40px 0;
+  text-shadow: 0 2px 8px rgba(14, 62, 151, 0.3);
+}
+
+.links-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.3) 0%, rgba(14, 62, 151, 0.1) 100%);
+  border: 2px solid rgba(14, 62, 151, 0.5);
+  border-radius: 12px;
+  color: #87ceeb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  background: linear-gradient(135deg, rgba(14, 62, 151, 0.5) 0%, rgba(14, 62, 151, 0.2) 100%);
+  border-color: rgba(14, 62, 151, 0.8);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(14, 62, 151, 0.2);
+}
+
+.link-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.link-button.github {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ccc;
+}
+
+.link-button.github:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .tech-card,
+  .tool-badge,
+  .link-button,
+  .back-button {
+    transition: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-technologies {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .tech-section h2,
+  .tools-section h2,
+  .project-links h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-detail-container {
+    padding: 0 15px;
+  }
+
+  .project-hero {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .project-hero h1 {
+    font-size: 2rem;
+  }
+
+  .project-lead {
+    font-size: 1rem;
+  }
+
+  .project-description-section,
+  .tech-section,
+  .tools-section,
+  .project-links {
+    padding: 40px 20px;
+  }
+
+  .project-description-section h2,
+  .tech-section h2,
+  .tools-section h2,
+  .project-links h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .project-description-section p {
+    font-size: 1rem;
+  }
+
+  .project-lead {
+    font-size: 1rem;
+  }
+
+  .tech-card {
+    padding: 15px;
+  }
+
+  .tech-card h3 {
+    font-size: 1rem;
+  }
+
+  .tech-card p {
+    font-size: 0.9rem;
+  }
+
+  .links-container {
+    flex-direction: column;
+  }
+
+  .link-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .project-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .project-description-section,
+  .tech-section,
+  .tools-section,
+  .project-links {
+    padding: 30px 15px;
+    border-radius: 15px;
+  }
+
+  .tools-list {
+    justify-content: center;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.link-button:focus-visible,
+.back-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 62, 151, 0.5);
+}

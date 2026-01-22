@@ -1,32 +1,21 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { Index } from '../pages/index/Index'
-import Form from '../components/Form/Form'
-
+import { ProjectDetail } from '../pages/ProjectDetail/ProjectDetail'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <Index></Index>
-      <article className="Pillars">
-        <h1 className="Pillars">Pillars</h1>
-        <section className="Pillars__section"></section>
-        <section className="Pillars__section"></section>
-        <section className="Pillars__section"></section>
-        <section className="Pillars__section"></section>
-      </article>
-      <article className="Pillars">
-        <h1 className="Pillars">Projects</h1>
-        <section className="Pillars__section"></section>
-        <section className="Pillars__section"></section>
-        <section className="Pillars__section"></section>
-        <section className="Pillars__section"></section>
-      </article>
-      <Form></Form>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route 
+            path="/" 
+            element={<Index />} 
+          />
+          <Route path="/project/:projectId" element={<ProjectDetail />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
