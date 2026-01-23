@@ -2,12 +2,15 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://metalprime.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router": "^7.12.0",
