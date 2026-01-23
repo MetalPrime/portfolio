@@ -18,4 +18,4 @@ export interface ProjectData {
     };
 }
 
-export type ProjectDataPreview = Omit<ProjectData, "fullDescription" | "images" | "technologies" | "codeLinks" >
+export type ProjectDataPreview = Omit<ProjectData, "fullDescription" | "images" | "technologies" >
