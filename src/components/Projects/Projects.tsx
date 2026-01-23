@@ -35,7 +35,7 @@ export const Projects: React.FC = () => {
                                 role="article"
                             >
                                 <div className="project-image-wrapper">
-                                    <img src={project.image} alt={project.title} className="project-image-placeholder" loading='lazy' decoding='sync' />
+                                    <img src={import.meta.env.BASE_URL + project.image} alt={project.title} className="project-image-placeholder" loading='lazy' decoding='sync' />
                                     <div className="project-overlay" aria-hidden="true" />
                                 </div>
 
